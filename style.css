@@ -44,8 +44,37 @@ body {
     margin: auto;
 }
 
-.nav {
+.photos {
     background-color:aquamarine;
+    border-bottom: none;
+}
+
+nav {
+    background-color:aqua;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+nav ul {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 960px;
+    margin: 8px auto;
+    list-style: none;
+    
+    
+}
+
+nav ul li {
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
 }
 
 .title_txt {

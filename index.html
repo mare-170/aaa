@@ -4,14 +4,163 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
+    <title>空の写真</title>
+    <link rel="stylesheet" href="style.css">
     
 </head>
 <body>
-    <h1>Hi,mare</h1>
-    <h2>This is mare's page</h2>
-    <video src="MyAce.mp4"></video>
+    <div id="loading">
+        <img class="loadind" src="img/Walk.gif" alt="loading">
+
+
+    </div>
+    <div id="Main" alt="Main">
+        <header>
+            <img src="img/icon.ico" alt="icon">
+            <img src="img/title_logo.png" width="600px" height="150px" alt="title_logo">
+            <h3  class="name_txt">作成者、Mr.kouga</h3>
+        </header>
+        <hr>
+        <main>
+            <nav>
+                <h2 class="nav">Sky's Photo!</h2>
+                
+            </nav>
+            <section name="photo">
+                <div class="photo">
+                    <img src="img/sky_photo.jpg" width="30%" height="30%"  alt="skyPhoto1">
+                    <h5>撮影者:Mr.kouga</h5>
+                    <button class="btn" type="button" id="photo1_btn">いいね♡</button>
+                    <h5>♡<span id="photo1_good">0</span></h5>
+                </div>
+                <div class="photo">
+                    <img src="img/sky_photo_2.jpg" width="30%" height="30%"  alt="skyPhoto2">
+                    <h5>撮影者:Mr.kouga</h5>
+                    <button class="btn" type="button" id="photo2_btn">いいね♡</button>
+                    <h5>♡<span id="photo2_good">0</span></h5>
+                </div>
+                <div class="photo">
+                    <img src="img/sky_photo_3.jpg" width="30%" height="30%"  alt="skyPhoto3">
+                    <h5>撮影者:Mr.kouga</h5>
+                    <button class="btn" type="button" id="photo3_btn">いいね♡</button>
+                    <h5>♡<span id="photo3_good">0</span></h5>
+                </div>
+                <div class="photo">
+                    <img src="img/sky_photo_4.jpg" width="30%" height="30%"  alt="skyPhoto4">
+                    <h5>撮影者:Mr.kouga</h5>
+                    <button class="btn" type="button" id="photo4_btn">いいね♡</button>
+                    <h5>♡<span id="photo4_good">0</span></h5>
+                </div>
+                <div class="photo">
+                    <img src="img/sky_photo_5.jpg" width="30%" height="30%"  alt="skyPhoto5">
+                    <h5>撮影者:Mr.kouga</h5>
+                    <button class="btn" type="button" id="photo5_btn">いいね♡</button>
+                    <h5>♡<span id="photo5_good">0</span></h5>
+                </div>
+                
+                
+            </section>
+        </main>
+        <footer>
+            <p class="copyright">Copyright &copy; kouga.industry.com</p>
+        </footer>
+    </div>
+
+    <script>
+        let a = false;
+        window.onload = function() {
+            setTimeout(function () {
+                onloadend();
+            }, 1);
+        }
+
+        function onloadend() {
+            document.getElementById("loading").style.display = "black";
+            document.getElementById("Main").style.display = "none";
+
+            setTimeout(function () {
+                document.getElementById("loading").style.display = "none";
+                document.getElementById("Main").style.display = "block";
+            }, 2000)
+
+
+            let photo_max = 5;
+            let btn_list = ["photo1_btn", "photo2_btn", "photo3_btn", "photo4_btn", "photo5_btn"];
+            let good_list = ["photo1_good", "photo2_good", "photo3_good", "photo4_good", "photo5_good"]
+            let btn =new Array(photo_max);
+            let good =new Array(photo_max);
+            let cnt = new Array(photo_max);
+            let cnt_ip =new Array(photo_max);
+            let cheat = [53, 10000, 299, 300, 10000000];
+
+
+
+            
+
+            
+            for (let i=0; i<photo_max; i++) {
+                btn[i] = document.getElementById(btn_list[i]);
+                good[i] = document.getElementById(good_list[i]);
+                cnt[i] = cheat[i];
+                cnt_ip[i] = 0;
+                good[i].textContent = cnt[i];
+                g(btn[i], good[i], cnt[i], cnt_ip[i]);
+
+            }
+
+            
+         
+
+            
+
+           
+        
+
+        
+        
+
+         
+            
+        }
+
+        function g(w, x, y, z) { //btn, good, cnt, ip
+            w.addEventListener("click", function() {
+                if (z == 0) {
+                    y += 1;
+                    z = 1;
+                } else if (z == 1) {
+                    y -= 1;
+                    z = 0;
+                }
+                x.textContent = y;
+                
+                
+                
+            })
+        }
+
+      
+    
+
+
+
+
+    </script>
+
+    <!-- <div class="p">
+
+        <h1 class="tytol">Hi,mare</h1>
+        <h2 class="subTytol">This is mare's page</h2>
+        <video src="MyAce.mp4"></video>
+
+
+
+
+        <a href="add.html">Add Page</a>
+
+    </div>
+     -->
     
 
 
@@ -19,6 +168,6 @@
 
 
     
-    <script src="main.js"></script>
+    <!-- <script src="main.js"></script> -->
 </body>
 </html>

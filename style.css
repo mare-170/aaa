@@ -44,6 +44,17 @@ body {
     margin: auto;
 }
 
+.icon {
+    width:300px;
+    height:300px;
+}
+
+.logo {
+    width:600px;
+    height:150px;
+
+}
+
 .photos {
     background-color:aquamarine;
     border-bottom: none;
@@ -101,4 +112,23 @@ footer {
     background-color: pink;
     border:1px solid #333;
     border-radius: 5px;
+}
+
+
+/* スマホ用ヘッダのスタイル*/
+@media screen and (max-width:960px) {
+    .site_logo {
+      width: 100%;
+      margin-bottom: 32px;
+    }
+  
+    .site_logo img {
+      width: 100%;
+      height: auto;
+    }
+  
+    .site_reserve {
+      width: 100%;
+      text-align: center;
+    }
 }

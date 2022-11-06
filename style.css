@@ -117,18 +117,11 @@ footer {
 
 /* スマホ用ヘッダのスタイル*/
 @media screen and (max-width:960px) {
-    .site_logo {
-      width: 100%;
+    .logo {
+      width: 70%;
+      height: 70%;
       margin-bottom: 32px;
     }
   
-    .site_logo img {
-      width: 100%;
-      height: auto;
-    }
-  
-    .site_reserve {
-      width: 100%;
-      text-align: center;
-    }
+
 }

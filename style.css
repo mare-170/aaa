@@ -118,8 +118,8 @@ footer {
 /* スマホ用ヘッダのスタイル*/
 @media screen and (max-width:960px) {
     .logo {
-      width: 70%;
-      height: 70%;
+      width: 100%;
+      height: 100%;
       margin-bottom: 32px;
     }
   
